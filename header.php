@@ -1,0 +1,11 @@
+<header>
+    <div class="headerContent">
+        <nav>
+            <div class="headerLeftContent">
+                <img src="public_html/img/logo-big-v4.png">
+                <a href="">Takenlijst</a>
+            </div>
+            <a href="">Inloggen</a>
+        </nav>
+    </div>
+</header>

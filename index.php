@@ -7,17 +7,11 @@
     <link rel="stylesheet" href="public_html/css/main.css">
 </head>
 <body>
-    <header>
-        <div class="headerContent">
-            <nav>
-                <div class="headerLeftContent">
-                    <img src="public_html/img/logo-big-v4.png">
-                    <a href="">Takenlijst</a>
-                </div>
-                <a href="">Inloggen</a>
-            </nav>
-        </div>
-    </header>
     
+<?php 
+require_once 'header.php' 
+?>
+    
+
 </body>
 </html>
