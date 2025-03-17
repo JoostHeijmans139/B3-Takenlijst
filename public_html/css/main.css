@@ -3,18 +3,38 @@
     padding: 0;
 }
 
+/* Header */
 header {
-    background-color: rgb(235, 226, 255);
+    background-color: #dcddde;
+}
+
+img {
+    height: 75px;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
 }
 
 nav {
     height: 75px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 5px 10px 5px 10px;
+    width: 1300px;
 }
 
-img {
-    height: 75px;
-    margin-right: 25px;
+.headerLeftContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 325px;
+}
+
+a {
+    color: #27ae60;
+    text-decoration: none;
+    font-size: 20px;
 }
