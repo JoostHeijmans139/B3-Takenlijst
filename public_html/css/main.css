@@ -19,6 +19,7 @@ header {
 }
 
 .headerLogo {
+    margin-top: -10px;
     height: 75px;
 }
 
@@ -29,7 +30,7 @@ header {
 }
 
 nav {
-    height: 75px;
+    height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
