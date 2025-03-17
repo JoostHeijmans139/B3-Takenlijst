@@ -12,6 +12,7 @@
 require_once 'header.php' 
 ?>
     
+<img src="public_html/img/logo-big-v2.png" alt="developer land" class="bannerLogo">
 
 </body>
 </html>
