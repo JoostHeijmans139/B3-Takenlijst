@@ -7,6 +7,12 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.wrapper {
+    margin: 0 auto;
+    width: 968px;
+    text-align: center;
+}
+
 /* Header */
 header {
     background-color: #dcddde;
@@ -41,4 +47,10 @@ a {
     color: #27ae60;
     text-decoration: none;
     font-size: 20px;
+}
+
+/* Homepagina */
+.bannerLogo {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

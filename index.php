@@ -8,11 +8,14 @@
 </head>
 <body>
     
-<?php 
-require_once 'header.php' 
-?>
-    
-<img src="public_html/img/logo-big-v2.png" alt="developer land" class="bannerLogo">
+    <?php 
+    require_once 'header.php' 
+    ?>
 
+
+    <div class="wrapper">
+        <img src="public_html/img/logo-big-v2.png" alt="developer land" class="bannerLogo">
+    </div>
+    
 </body>
 </html>
