@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <img src="public_html/img/logo-big-v2.png">
+            <img src="public_html/img/logo-big-v4.png">
             <a href="">Takenlijst</a>
             <a href="">Inloggen</a>
         </nav>
