@@ -12,5 +12,23 @@
     require_once "header.php"
     ?>
     
+    <div class="wrapper">
+        <main>
+            <div class="loginBox">
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="E-mailadres">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" id="password" placeholder="Wachtwoord">
+                </div>
+
+                <input type="submit" value="Aanmelden">
+
+                <a href="signUp.php">Nog geen account?</a>
+
+            </div>
+        </main>
+    </div>
+
 </body>
 </html>
