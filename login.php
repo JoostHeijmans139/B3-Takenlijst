@@ -14,19 +14,25 @@
     
     <div class="wrapper">
         <main>
-            <div class="loginBox">
-                <div class="form-group">
-                    <input type="email" name="email" id="email" placeholder="E-mailadres" required>
+            <form>
+                <div class="loginBox">
+                    <h1>Login bij de Takenlijst</h1>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="E-mailadres">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" placeholder="Wachtwoord">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" name="submit" id="submit" value="Aanmelden">
+                    </div>
+
+                    <a href="signUp.php">Nog geen account?</a>
+
                 </div>
-                <div class="form-group">
-                    <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
-                </div>
-
-                <input type="submit" value="Aanmelden">
-
-                <a href="signUp.php">Nog geen account?</a>
-
-            </div>
+            </form>
         </main>
     </div>
 
