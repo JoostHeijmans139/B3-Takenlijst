@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inloggen</title>
     <link rel="stylesheet" href="public_html/css/main.css">
-</head>
-<body>
 
+    <?php
+    require_once 'backend/config.php';
+    ?>
+</head>
+
+<body>
     <?php
     require_once "header.php"
     ?>

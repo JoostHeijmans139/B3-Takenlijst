@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account maken</title>
     <link rel="stylesheet" href="public_html/css/main.css">
+
+    <?php
+    require_once 'backend/config.php';
+    ?>
 </head>
+
 <body>
-    
     <?php 
     require_once 'header.php' 
     ?>
 
 
     <div class="wrapper">
-        <form>
+        <form action="app/Http/Controllers/signUpController.php" method="POST">
             <div class="loginBox">
                 <h1>Account aanmaken</h1>
                 <div class="form-group">
