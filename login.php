@@ -16,10 +16,10 @@
         <main>
             <div class="loginBox">
                 <div class="form-group">
-                    <input type="email" name="email" id="email" placeholder="E-mailadres">
+                    <input type="email" name="email" id="email" placeholder="E-mailadres" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" id="password" placeholder="Wachtwoord">
+                    <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
                 </div>
 
                 <input type="submit" value="Aanmelden">
