@@ -14,20 +14,30 @@
 
 
     <div class="wrapper">
-        <div class="loginBox">
-            <div class="form-group">
-                <input type="text" name="name" id="name" placeholder="Naam (Optioneel)" required>
-            </div>
-            <div class="form-group">
-                <input type="email" name="email" id="email" placeholder="E-mailadres" required>
-            </div>
-            <div class="form-group">
-                <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
-            </div>
+        <form>
+            <div class="loginBox">
+                <h1>Account aanmaken</h1>
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Naam (Optioneel)" required>
+                </div>
 
-            <input type="submit" value="Account maken">
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="E-mailadres" required>
+                </div>
 
-        </div>
+                <div class="form-group">
+                    <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" name="submit" id="submit" value="Registreren">
+                </div>
+                
+                <a href="login.php" class="accountQuestion">Heb je al een account?</a>
+                
+
+            </div>
+        </form>
     </div>
     
 </body>
