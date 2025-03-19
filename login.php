@@ -33,7 +33,7 @@
                         <input type="submit" name="submit" id="submit" value="Aanmelden">
                     </div>
 
-                    <a href="signUp.php" class="signUp">Nog geen account?</a>
+                    <a href="signUp.php" class="accountQuestion">Nog geen account?</a>
 
                 </div>
             </form>
