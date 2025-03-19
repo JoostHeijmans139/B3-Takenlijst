@@ -44,9 +44,13 @@ nav {
 
 .headerLeftContent {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 325px;
+}
+
+.headerRightContent {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
 }
 
 a {
