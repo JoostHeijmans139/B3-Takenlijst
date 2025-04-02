@@ -7,7 +7,7 @@
 
             <div class="headerRightContent">
                 <a href="index.php">Takenlijst</a>
-                <a href="../login.php">Inloggen</a>
+                <a href="../app/Http/Controllers/logOutController.php">Uitloggen</a>
             </div>
 
         </nav>
