@@ -22,6 +22,28 @@ session_start();
         <?php 
         require_once 'create.php'
         ?>
+    
+        <div class="taskColumns">
+            <div class="taskColumn">
+                <h2>To do</h2>
+            
+                <div class="tasks">
+                    <p class="taskName">Taaknaam</p>
+                    <p class="departmentName">Afdeling</p>
+                    <p class="deadlineName">Deadline: 28-4-2025</p>
+                </div>
+
+
+            </div>
+
+            <div class="taskColumn">
+                <h2>Doing</h2>
+            </div>
+
+            <div class="taskColumn">
+                <h2>Done</h2>
+            </div>
+        </div>
 
     </div>
 

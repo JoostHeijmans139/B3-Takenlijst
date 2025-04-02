@@ -64,14 +64,14 @@ a {
 }
 
 
-/* Homepagina */
+/* ===================== Homepagina ===================== */
 .bannerLogo {
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
 
-/* Inlogscherm */
+/* ===================== Inlogscherm ===================== */
 .loginForm {
     display: flex;
     justify-content: center;
@@ -117,7 +117,7 @@ a {
 }
 
 
-/* Taak aanmaken */
+/* ===================== Taak aanmaken ===================== */
 .formPopUp {
     display: none;
     bottom: 0;
@@ -150,6 +150,7 @@ a {
 .createBox {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
     padding: 20px 0px;
     width: 400px;
     background-color: #dcddde;
@@ -193,4 +194,48 @@ label {
     }
 }
 
+/* ===================== Taak kolommen ===================== */
+.taskColumns{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
+.taskColumn {
+    background-color:#dcddde;
+    border-radius: 5px;
+    width: 300px;
+    min-height: 300px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+
+/* ===================== Taak vakken ===================== */
+.tasks {
+    background-color:#ffffff;
+    border-radius: 5px;
+    width: 260px;
+    padding: 10px;
+    margin: 0px 10px 10px 10px;
+    text-align: left;
+}
+
+.taskName {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.departmentName {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.deadlineName {
+    margin-top: 10px;
+    font-weight: 400;
+}
