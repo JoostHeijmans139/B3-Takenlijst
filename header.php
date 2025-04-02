@@ -6,8 +6,8 @@
             </div>
 
             <div class="headerRightContent">
-                <a href="tasks/index.php">Takenlijst</a>
-                <a href="login.php">Inloggen</a>
+                <a href="tasks/index.php" class="headerText">Takenlijst</a>
+                <a href="login.php" class="headerText">Inloggen</a>
             </div>
 
         </nav>

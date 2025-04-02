@@ -6,11 +6,11 @@
             </div>
 
             <div class="headerRightContent">
-                <a href="index.php">Takenlijst</a>
+                <a href="index.php" class="headerText">Takenlijst</a>
                 <?php if(isset($_SESSION['user_id'])) {?>
                 <a href="../app/Http/Controllers/logOutController.php">Uitloggen</a>
                 <?php } else {?>
-                <a href="../login.php">Inloggen</a>
+                <a href="../login.php"  class="headerText">Inloggen</a>
                 <?php } ?>
             </div>
 

@@ -53,7 +53,7 @@ nav {
     width: 300px;
 }
 
-a {
+.headerText {
     color: #27ae60;
     text-decoration: none;
     font-size: 20px;
