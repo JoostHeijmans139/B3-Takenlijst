@@ -6,7 +6,7 @@ $password = $_POST['password'];
 
 require_once '../../../backend/conn.php';
 
-$query = "SELECT email, password FROM login_data WHERE email = :email AND password = :password";
+$query = "SELECT * FROM login_data WHERE email = :email AND password = :password";
 
 $statement = $conn->prepare($query);
 
