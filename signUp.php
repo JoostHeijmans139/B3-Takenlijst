@@ -21,19 +21,19 @@
         <form action="app/Http/Controllers/signUpController.php" method="POST" class="loginForm">
             <div class="loginBox">
                 <h1>Account aanmaken</h1>
-                <div class="form-group">
+                <div class="formGroup">
                     <input type="text" name="name" id="name" placeholder="Naam (Optioneel)" required>
                 </div>
 
-                <div class="form-group">
+                <div class="formGroup">
                     <input type="email" name="email" id="email" placeholder="E-mailadres" required>
                 </div>
 
-                <div class="form-group">
+                <div class="formGroup">
                     <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
                 </div>
 
-                <div class="form-group">
+                <div class="formGroup">
                     <input type="submit" name="submit" class="submit" value="Registreren">
                 </div>
                 

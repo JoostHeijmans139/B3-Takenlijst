@@ -26,15 +26,15 @@ session_start();
             <form action="app/Http/Controllers/loginController.php" method="POST" class="loginForm">
                 <div class="loginBox">
                     <h1>Log in bij de Takenlijst</h1>
-                    <div class="form-group">
+                    <div class="formGroup">
                         <input type="email" name="email" id="email" placeholder="E-mailadres" required>
                     </div>
 
-                    <div class="form-group">
+                    <div class="formGroup">
                         <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
                     </div>
 
-                    <div class="form-group">
+                    <div class="formGroup">
                         <input type="submit" name="submit" class="submit" value="Aanmelden">
                     </div>
 
