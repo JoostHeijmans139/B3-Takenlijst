@@ -17,3 +17,4 @@ $statement->execute([
     ":password" => $password,
 ]);
 
+header("Location: ../../../login.php");
