@@ -3,8 +3,13 @@
         <nav>
             <div class="headerLeftContent">
                 <img src="../public_html/img/logo-big-v4.png" alt="developer land" class="headerLogo">
-                <a href="">Takenlijst</a>
             </div>
+
+            <div class="headerRightContent">
+                <a href="index.php">Takenlijst</a>
+                <a href="../login.php">Inloggen</a>
+            </div>
+
         </nav>
     </div>
 </header>
