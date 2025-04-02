@@ -18,11 +18,7 @@
     
     <div class="wrapper">
         <main>
-<<<<<<< Updated upstream
-            <form class="loginForm">
-=======
-            <form action="app/Http/Controllers/loginController.php" method="POST">
->>>>>>> Stashed changes
+            <form action="app/Http/Controllers/loginController.php" method="POST" class="loginForm">
                 <div class="loginBox">
                     <h1>Login bij de Takenlijst</h1>
                     <div class="form-group">
