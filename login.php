@@ -25,7 +25,7 @@ session_start();
         <main>
             <form action="app/Http/Controllers/loginController.php" method="POST" class="loginForm">
                 <div class="loginBox">
-                    <h1>Login bij de Takenlijst</h1>
+                    <h1>Log in bij de Takenlijst</h1>
                     <div class="form-group">
                         <input type="email" name="email" id="email" placeholder="E-mailadres" required>
                     </div>
