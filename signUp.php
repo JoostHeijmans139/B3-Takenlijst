@@ -18,7 +18,7 @@
 
 
     <div class="wrapper">
-        <form action="app/Http/Controllers/signUpController.php" method="POST">
+        <form action="app/Http/Controllers/signUpController.php" method="POST" class="loginForm">
             <div class="loginBox">
                 <h1>Account aanmaken</h1>
                 <div class="form-group">
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" name="submit" id="submit" value="Registreren">
+                    <input type="submit" name="submit" class="submit" value="Registreren">
                 </div>
                 
                 <a href="login.php" class="accountQuestion">Heb je al een account?</a>

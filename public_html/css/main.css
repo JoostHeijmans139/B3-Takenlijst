@@ -72,7 +72,7 @@ a {
 
 
 /* Inlogscherm */
-form {
+.loginForm {
     display: flex;
     justify-content: center;
 }
@@ -85,7 +85,7 @@ form {
     border-radius: 5px;
 }
 
-#email, #password, #submit, #name {
+#name, #email, #password, .submit{
     width: 300px;
     margin: 10px;
     padding: 10px;
@@ -94,7 +94,7 @@ form {
     box-sizing: border-box;
 }
 
-#submit {
+.submit {
     background-color: #27ae60;
     border: 1px solid #27ae60;
     color: white;
@@ -115,4 +115,82 @@ form {
         text-decoration: underline;
     }
 }
+
+
+/* Taak aanmaken */
+.formPopUp {
+    display: none;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
+}
+
+.createButton { 
+    background-color: #27ae60;
+    border: 1px solid #27ae60;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #2f80ed;
+        border: 1px solid #2f80ed;
+    }
+}
+
+.createForm {
+    display: flex;
+    justify-content: center;
+}
+
+.createBox {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+    width: 400px;
+    background-color: #dcddde;
+    border-radius: 5px;
+}
+
+.create {
+    display: flex;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 20px;
+}
+
+#deadline {
+    justify-content: center;
+}
+
+.closeButton {
+    background-color: #27ae60;
+    border: 1px solid #27ae60;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 300px;
+    margin-top: 30px;
+    padding: 10px;
+    
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #2f80ed;
+        border: 1px solid #2f80ed;
+    }
+}
+
 

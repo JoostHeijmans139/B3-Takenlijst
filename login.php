@@ -18,7 +18,7 @@
     
     <div class="wrapper">
         <main>
-            <form>
+            <form class="loginForm">
                 <div class="loginBox">
                     <h1>Login bij de Takenlijst</h1>
                     <div class="form-group">
@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" name="submit" id="submit" value="Aanmelden">
+                        <input type="submit" name="submit" class="submit" value="Aanmelden">
                     </div>
 
                     <a href="signUp.php" class="accountQuestion">Nog geen account?</a>

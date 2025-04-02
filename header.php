@@ -6,7 +6,7 @@
             </div>
 
             <div class="headerRightContent">
-                <a href="tasks.php">Takenlijst</a>
+                <a href="tasks/index.php">Takenlijst</a>
                 <a href="login.php">Inloggen</a>
             </div>
 
