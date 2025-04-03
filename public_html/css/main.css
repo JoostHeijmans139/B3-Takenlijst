@@ -72,9 +72,19 @@ nav {
 /* ===================== Homepagina ===================== */
 .bannerLogo {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
+.homepageTitle {
+    font-size: 40px;
+    color: #27ae60;
+}
+
+.homepageText {
+    font-size: 30px;
+    color: #2f80ed;
+    font-style: italic;
+}
 
 /* ===================== Inlogscherm ===================== */
 .loginForm {

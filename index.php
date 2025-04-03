@@ -20,6 +20,8 @@ session_start();
     <div class="wrapper">
         <main>
             <img src="public_html/img/logo-big-v2.png" alt="developer land" class="bannerLogo">
+            <h2 class="homepageTitle">Developerland heeft dé takenlijst voor jou!</h2>
+            <p class="homepageText">Hou al je taken overzichtelijk bij op één plek</p>
         </main>
     </div>
     
