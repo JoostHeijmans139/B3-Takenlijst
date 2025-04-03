@@ -8,7 +8,6 @@
             <div class="headerRightContent2">
                 <a href="login.php" class="headerText">Inloggen</a>
             </div>
-
         </nav>
     </div>
 </header>

@@ -19,8 +19,6 @@
                     <a href="../login.php"  class="headerText">Inloggen</a>
                 </div>
             <?php } ?>
-
-
         </nav>
     </div>
 </header>
