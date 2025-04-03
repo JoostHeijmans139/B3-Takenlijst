@@ -6,9 +6,13 @@
             </div>
 
             <div class="headerRightContent">
-                <a href="index.php" class="headerText">Takenlijst</a>
+
                 <?php if(isset($_SESSION['user_id'])) {?>
-                <a href="../app/Http/Controllers/logOutController.php">Uitloggen</a>
+                <a href="index.php" class="headerText">Takenlijst</a>
+                <?php } ?>
+
+                <?php if(isset($_SESSION['user_id'])) {?>
+                <a href="../app/Http/Controllers/logOutController.php" class="headerText">Uitloggen</a>
                 <?php } else {?>
                 <a href="../login.php"  class="headerText">Inloggen</a>
                 <?php } ?>
