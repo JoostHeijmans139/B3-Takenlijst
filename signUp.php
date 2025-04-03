@@ -37,9 +37,7 @@
                     <input type="submit" name="submit" class="submit" value="Registreren">
                 </div>
                 
-                <a href="login.php" class="accountQuestion">Heb je al een account?</a>
-                
-
+                <a href="login.php" class="accountQuestion">Heb je al een account?</a>  
             </div>
         </form>
     </div>
