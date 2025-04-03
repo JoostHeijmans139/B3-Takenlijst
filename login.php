@@ -47,3 +47,12 @@ session_start();
 
 </body>
 </html>
+
+<?php if(isset($_GET['login']))
+    { ?>
+        <script>
+            setTimeout(function () {
+                alert("Gebruikersnaam of wachtwoord onjuist!")
+            }, 25)
+        </script>
+    <?php } ?>

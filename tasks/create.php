@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <div class="formPopUp" id="createTask">
     <form action="app/Http/Controllers/tasksController.php" method="POST" class="createForm">      
         <div class="createBox">
