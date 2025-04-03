@@ -1,6 +1,45 @@
 <?php
 session_start();
+if(!isset($_SESSION['user_id']))
+{
+    header("Location: ../login.php");
+}
+
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+
+header("Cache-Control: post-check=0, pre-check=0", false);
+
+header("Pragma: no-cache");
+ 
 ?>
+
+<!-- 1. Kolom "created by" maken
+2. één grote query maken om alle taken op te halen
+3. for each loop maken voor elke task type -->
+
+
+<?php 
+$titel = $_POST['titel'];
+$status = $_POST['status'];
+$afdeling = $_POST['afdeling'];
+$created_by = $_POST['created_by'];
+
+require_once "../backend/conn.php";
+
+$query = "SELECT * FROM taken
+VALUES(:titel, :status, :afdeling, :created_by)";
+
+$statement = $conn->prepare($query);
+
+$statement->execute([
+    
+]);
+
+$user = $statement->fetch(PDO::FETCH_ASSOC);
+
+echo $user;
+?>
+
 
 <!DOCTYPE html>
 <html lang="nl">

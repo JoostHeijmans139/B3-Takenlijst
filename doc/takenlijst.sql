@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Gegenereerd op: 03 apr 2025 om 09:29
+-- Gegenereerd op: 03 apr 2025 om 19:57
 -- Serverversie: 8.0.30
 -- PHP-versie: 8.1.10
 
@@ -39,7 +39,8 @@ CREATE TABLE `login_data` (
 --
 
 INSERT INTO `login_data` (`id`, `email`, `password`, `name`) VALUES
-(1, 'jwfheijmans@gmail.com', '$2y$10$QTjq6fpP44yqiiz0fH56wey/BuPlYKlNCJ4UWoFWGgjbLnCUuUdEy', 'Kat');
+(1, 'jwfheijmans@gmail.com', '$2y$10$QTjq6fpP44yqiiz0fH56wey/BuPlYKlNCJ4UWoFWGgjbLnCUuUdEy', 'Kat'),
+(9, 'p@p', '$2y$10$q5vDgRAXkZcZapEtjyM1ueY0/yk5MA2CDiGYJtmiDCL3Bm148Bole', 'p');
 
 -- --------------------------------------------------------
 
@@ -51,7 +52,8 @@ CREATE TABLE `taken` (
   `id` int NOT NULL,
   `titel` varchar(255) NOT NULL,
   `status` varchar(255) DEFAULT 'to do',
-  `afdeling` varchar(255) NOT NULL
+  `afdeling` varchar(255) NOT NULL,
+  `created_by` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -78,7 +80,7 @@ ALTER TABLE `taken`
 -- AUTO_INCREMENT voor een tabel `login_data`
 --
 ALTER TABLE `login_data`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT voor een tabel `taken`
