@@ -24,8 +24,29 @@ if($statement->rowCount() < 1)
 if(!password_verify($password, $user['password']))
 {
     header("Location: ../../../login.php");
-    die("Error: gebruikersnaam of wachtwoord niet juist!");
 }
+
+?>
+
+<script>
+    function validate()
+    {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    if (email == $_email && password == $password)
+    {
+    alert("login successfully");
+    return false;
+
+    }
+    else 
+    {
+    alert("login failed");
+    }
+    }
+</script>
+
+<?php
 
 $_SESSION['user_id'] = $user['id'];
 

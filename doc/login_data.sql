@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Gegenereerd op: 18 mrt 2025 om 08:08
+-- Gegenereerd op: 03 apr 2025 om 09:16
 -- Serverversie: 8.0.30
 -- PHP-versie: 8.1.10
 
@@ -31,21 +31,15 @@ CREATE TABLE `login_data` (
   `id` int NOT NULL,
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `naam` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- --------------------------------------------------------
-
 --
--- Tabelstructuur voor tabel `taken`
+-- Gegevens worden geëxporteerd voor tabel `login_data`
 --
 
-CREATE TABLE `taken` (
-  `id` int NOT NULL,
-  `titel` varchar(255) NOT NULL,
-  `status` varchar(255) DEFAULT 'to do',
-  `afdeling` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+INSERT INTO `login_data` (`id`, `email`, `password`, `name`) VALUES
+(1, 'jwfheijmans@gmail.com', '$2y$10$QTjq6fpP44yqiiz0fH56wey/BuPlYKlNCJ4UWoFWGgjbLnCUuUdEy', 'Kat');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -58,12 +52,6 @@ ALTER TABLE `login_data`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexen voor tabel `taken`
---
-ALTER TABLE `taken`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
@@ -71,13 +59,7 @@ ALTER TABLE `taken`
 -- AUTO_INCREMENT voor een tabel `login_data`
 --
 ALTER TABLE `login_data`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT voor een tabel `taken`
---
-ALTER TABLE `taken`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
