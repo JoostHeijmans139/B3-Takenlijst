@@ -18,59 +18,60 @@ session_start();
     ?>
 
     <div class="wrapper">
-        <button class="createButton" onclick="openForm()">Nieuwe taak</button>
+        <main>
+            <button class="createButton" onclick="openForm()">Nieuwe taak</button>
 
-        <?php 
-        require_once 'create.php'
-        ?>
-    
-        <div class="taskColumns">
-            <div class="taskColumn">
-                <h2>To do</h2>
-            
-                <div class="tasks">
-                    <div class="taskAlign">
-                        <p class="taskName">Taaknaam</p>
-                        <a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+            <?php 
+            require_once 'create.php'
+            ?>
+        
+            <div class="taskColumns">
+                <div class="taskColumn">
+                    <h2>To do</h2>
+                
+                    <div class="tasks">
+                        <div class="taskAlign">
+                            <p class="taskName">Taaknaam</p>
+                            <a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                        </div>
+                        
+                        <p class="departmentName">Afdeling</p>
+                        <p class="deadlineName">Deadline: 28-4-2025</p>
                     </div>
-                    
-                    <p class="departmentName">Afdeling</p>
-                    <p class="deadlineName">Deadline: 28-4-2025</p>
+
                 </div>
 
-            </div>
-
-            <div class="taskColumn">
-                <h2>Doing</h2>
-                            
-                <div class="tasks">
-                    <div class="taskAlign">
-                        <p class="taskName">Taaknaam</p>
-                        <a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                <div class="taskColumn">
+                    <h2>Doing</h2>
+                                
+                    <div class="tasks">
+                        <div class="taskAlign">
+                            <p class="taskName">Taaknaam</p>
+                            <a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                        </div>
+                        
+                        <p class="departmentName">Afdeling</p>
+                        <p class="deadlineName">Deadline: 28-4-2025</p>
                     </div>
-                    
-                    <p class="departmentName">Afdeling</p>
-                    <p class="deadlineName">Deadline: 28-4-2025</p>
+
                 </div>
 
-            </div>
-
-            <div class="taskColumn">
-                <h2>Done</h2>
-                            
-                <div class="tasks">
-                    <div class="taskAlign">
-                        <p class="taskName">Taaknaam</p>
-                        <a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                <div class="taskColumn">
+                    <h2>Done</h2>
+                                
+                    <div class="tasks">
+                        <div class="taskAlign">
+                            <p class="taskName">Taaknaam</p>
+                            <a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                        </div>
+                        
+                        <p class="departmentName">Afdeling</p>
+                        <p class="deadlineName">Deadline: 28-4-2025</p>
                     </div>
-                    
-                    <p class="departmentName">Afdeling</p>
-                    <p class="deadlineName">Deadline: 28-4-2025</p>
+
                 </div>
-
             </div>
-        </div>
-
+        </main>
     </div>
 
     <script>

@@ -2,7 +2,6 @@
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -17,6 +16,7 @@ session_start();
 </head>
 
 <body>
+
     <?php
     require_once "header.php"
     ?>
@@ -39,7 +39,6 @@ session_start();
                     </div>
 
                     <a href="signUp.php" class="accountQuestion">Nog geen account?</a>
-
                 </div>
             </form>
         </main>

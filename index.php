@@ -12,8 +12,11 @@
     require_once 'header.php' 
     ?>
 
+
     <div class="wrapper">
-        <img src="public_html/img/logo-big-v2.png" alt="developer land" class="bannerLogo">
+        <main>
+            <img src="public_html/img/logo-big-v2.png" alt="developer land" class="bannerLogo">
+        </main>
     </div>
     
 </body>
