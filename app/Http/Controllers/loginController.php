@@ -28,7 +28,7 @@ if(!password_verify($password, $user['password']))
 
 ?>
 
-<script>
+<!-- <script>
     function validate()
     {
     let email = document.getElementById("email").value;
@@ -44,7 +44,7 @@ if(!password_verify($password, $user['password']))
     alert("login failed");
     }
     }
-</script>
+</script> -->
 
 <?php
 
