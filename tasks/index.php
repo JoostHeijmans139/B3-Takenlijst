@@ -29,47 +29,60 @@ session_start();
                 <div class="taskColumn">
                     <h2>To do</h2>
                 
-                    <div class="tasks">
-                        <div class="taskAlign">
-                            <p class="taskName">Taaknaam</p>
-                            <a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
-                        </div>
+                    <div class="taskHolder">         
+                            <?php
+                            require 'edit.php';
+                            ?>
+                        <div class="tasks">
+                            <div class="taskAlign">
+                                <p class="taskName">Taaknaam</p>
+                                <a onclick="toggleEdit()" class="editTask"><i class="fa-solid fa-pen-to-square"></i></a>
+                            </div>
                         
-                        <p class="departmentName">Afdeling</p>
-                        <p class="deadlineName">Deadline: 28-4-2025</p>
+                            <p class="departmentName">Afdeling</p>
+                            <p class="deadlineName">Deadline: 28-4-2025</p>
+                        </div>
                     </div>
-
                 </div>
 
                 <div class="taskColumn">
                     <h2>Doing</h2>
                                 
-                    <div class="tasks">
-                        <div class="taskAlign">
-                            <p class="taskName">Taaknaam</p>
-                            <a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
-                        </div>
+                    <div class="taskHolder">         
+                            <?php
+                            require 'edit.php';
+                            ?>
+                        <div class="tasks">
+                            <div class="taskAlign">
+                                <p class="taskName">Taaknaam</p>
+                                <a onclick="toggleEdit()" class="editTask"><i class="fa-solid fa-pen-to-square"></i></a>
+                            </div>
                         
-                        <p class="departmentName">Afdeling</p>
-                        <p class="deadlineName">Deadline: 28-4-2025</p>
+                            <p class="departmentName">Afdeling</p>
+                            <p class="deadlineName">Deadline: 28-4-2025</p>
+                        </div>
                     </div>
-
                 </div>
 
                 <div class="taskColumn">
                     <h2>Done</h2>
                                 
-                    <div class="tasks">
-                        <div class="taskAlign">
-                            <p class="taskName">Taaknaam</p>
-                            <a href="" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
-                        </div>
+                    <div class="taskHolder">         
+                            <?php
+                            require 'edit.php';
+                            ?>
+                        <div class="tasks">
+                            <div class="taskAlign">
+                                <p class="taskName">Taaknaam</p>
+                                <a onclick="toggleEdit()" class="editTask"><i class="fa-solid fa-pen-to-square"></i></a>
+                            </div>
                         
-                        <p class="departmentName">Afdeling</p>
-                        <p class="deadlineName">Deadline: 28-4-2025</p>
+                            <p class="departmentName">Afdeling</p>
+                            <p class="deadlineName">Deadline: 28-4-2025</p>
+                        </div>
                     </div>
-
                 </div>
+
             </div>
         </main>
     </div>
@@ -81,6 +94,12 @@ session_start();
         function closeForm() {
         document.getElementById("createTask").style.display = "none";
         }
+
+        function toggleEdit() {
+            event.target.closest(".taskHolder").children[0].classList.toggle("hide");
+            event.target.closest(".taskHolder").children[1].classList.toggle("hide");
+        }
+        
     </script>
 
 </body>

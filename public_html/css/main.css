@@ -260,6 +260,64 @@ h2 {
     justify-content: space-between;
 }
 
-.edit {
+
+/* ===================== Taak bewerken ===================== */
+.editTask {
     color: black;
+    cursor: pointer;
+}
+
+.hide {
+    display: None;
+}
+
+.editTitle {
+    font-size: 22px;
+    font-weight: 500;
+    max-width: 200px;
+}
+
+.edit {
+    display: flex;
+    width: 200px;
+    margin: 10px 0px;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+.statusChoice {
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+.editFormButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeEditButton {
+    width: 125px;
+    margin-top: 10px;
+    padding: 10px;
+
+    background-color: #27ae60;
+    border: 1px solid #27ae60;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #2f80ed;
+        border: 1px solid #2f80ed;
     }
+}
