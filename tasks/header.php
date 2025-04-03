@@ -6,17 +6,20 @@
             </div>
 
             <div class="headerRightContent">
-
                 <?php if(isset($_SESSION['user_id'])) {?>
-                <a href="index.php" class="headerText">Takenlijst</a>
+                    <a href="index.php" class="headerText">Takenlijst</a>
                 <?php } ?>
 
                 <?php if(isset($_SESSION['user_id'])) {?>
-                <a href="../app/Http/Controllers/logOutController.php" class="headerText">Uitloggen</a>
-                <?php } else {?>
-                <a href="../login.php"  class="headerText">Inloggen</a>
-                <?php } ?>
+                    <a href="../app/Http/Controllers/logOutController.php" class="headerText">Uitloggen</a>
             </div>
+            
+            <?php } else {?>
+                <div class="headerRightContent2">
+                    <a href="../login.php"  class="headerText">Inloggen</a>
+                </div>
+            <?php } ?>
+
 
         </nav>
     </div>

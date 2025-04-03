@@ -5,7 +5,7 @@
                 <img src="public_html/img/logo-big-v4.png" alt="developer land" class="headerLogo">
             </div>
 
-            <div class="headerRightContent">
+            <div class="headerRightContent2">
                 <a href="login.php" class="headerText">Inloggen</a>
             </div>
 
