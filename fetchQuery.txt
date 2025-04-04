@@ -1,0 +1,26 @@
+<?php 
+$title = $_POST['title'];
+$status = $_POST['status'];
+$department = $_POST['department'];
+$deadline = $_POST['deadline'];
+$created_by = $_POST['id'];
+
+require_once "../backend/conn.php";
+
+$query = "SELECT * FROM taken
+VALUES(:title, :status, :department, :deadline, :created_by)";
+
+$statement = $conn->prepare($query);
+
+$statement->execute([
+    ":title" => $title,
+    ":status" => $status,
+    ":department" => $department,
+    ":deadline" => $deadline,
+    ":created_by" => $created_by,
+]);
+
+$user = $statement->fetch(PDO::FETCH_ASSOC);
+
+echo $user;
+?>

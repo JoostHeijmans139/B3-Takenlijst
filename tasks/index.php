@@ -18,29 +18,6 @@ header("Pragma: no-cache");
 3. for each loop maken voor elke task type -->
 
 
-<?php 
-$titel = $_POST['titel'];
-$status = $_POST['status'];
-$afdeling = $_POST['afdeling'];
-$created_by = $_POST['created_by'];
-
-require_once "../backend/conn.php";
-
-$query = "SELECT * FROM taken
-VALUES(:titel, :status, :afdeling, :created_by)";
-
-$statement = $conn->prepare($query);
-
-$statement->execute([
-    
-]);
-
-$user = $statement->fetch(PDO::FETCH_ASSOC);
-
-echo $user;
-?>
-
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
