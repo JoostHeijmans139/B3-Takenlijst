@@ -71,11 +71,12 @@ nav {
 
 /* ===================== Homepagina ===================== */
 .bannerLogo {
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .homepageTitle {
+    margin-top: 0px;
     font-size: 40px;
     color: #27ae60;
 }
