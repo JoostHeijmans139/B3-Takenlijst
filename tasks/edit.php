@@ -41,15 +41,15 @@ if (isset($editTask))
                 <label for="status">Status</label>
                 <div class="statusChoice">
                     <div>
-                        <input type="radio" name="status" value="To do" <?= $editTask['status'] === 'To do' ? 'checked' : '' ?>>
+                        <input type="radio" name="status" value="To do" <?= $editTask['status'] === 'to do' ? 'checked' : '' ?>>
                         <label for="todo">To do</label>
                     </div>
                     <div>
-                        <input type="radio" name="status" value="Doing" <?= $editTask['status'] === 'Doing' ? 'checked' : '' ?>>
+                        <input type="radio" name="status" value="Doing" <?= $editTask['status'] === 'doing' ? 'checked' : '' ?>>
                         <label for="doing">Doing</label>
                     </div>
                     <div>
-                        <input type="radio" name="status" value="Done" <?= $editTask['status'] === 'Done' ? 'checked' : '' ?>>
+                        <input type="radio" name="status" value="Done" <?= $editTask['status'] === 'done' ? 'checked' : '' ?>>
                         <label for="done">Done</label>
                     </div>
                 </div>
