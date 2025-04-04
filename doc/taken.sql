@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Gegenereerd op: 04 apr 2025 om 11:46
+-- Gegenereerd op: 04 apr 2025 om 16:09
 -- Serverversie: 8.0.30
 -- PHP-versie: 8.1.10
 
@@ -30,20 +30,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `taken` (
   `id` int NOT NULL,
   `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `status` varchar(255) DEFAULT 'to do',
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'to do',
   `department` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `deadline` date DEFAULT NULL,
   `created_by` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Gegevens worden geëxporteerd voor tabel `taken`
---
-
-INSERT INTO `taken` (`id`, `title`, `status`, `department`, `deadline`, `created_by`) VALUES
-(16, 'wed', 'to do', 'wedwed', '2025-04-10', 1),
-(17, 'eraserf', 'to do', 'aerferfarsfffffffff', '2025-04-17', 9),
-(18, 'aweef', 'to do', 'srf', '2025-04-17', 1);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -63,7 +54,7 @@ ALTER TABLE `taken`
 -- AUTO_INCREMENT voor een tabel `taken`
 --
 ALTER TABLE `taken`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
