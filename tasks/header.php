@@ -7,7 +7,7 @@
 
             <div class="headerRightContent">
                 <?php if(isset($_SESSION['user_id'])) {?>
-                    <a href="index.php" class="headerText">Takenlijst</a>
+                    <a href="index.php?task=null" class="headerText">Takenlijst</a>
                 <?php } ?>
 
                 <?php if(isset($_SESSION['user_id'])) {?>

@@ -130,3 +130,12 @@ header("Pragma: no-cache");
 
 </body>
 </html>
+
+<?php if($_GET['task'] == "created")
+    { ?>
+        <script>
+            setTimeout(function () {
+                alert("Taak aangemaakt!")
+            }, 25)
+        </script>
+    <?php } ?>

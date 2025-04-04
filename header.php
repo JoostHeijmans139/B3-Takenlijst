@@ -6,7 +6,7 @@
             </div>
 
             <div class="headerRightContent2">
-                <a href="login.php" class="headerText">Inloggen</a>
+                <a href="login.php?login=null" class="headerText">Inloggen</a>
             </div>
         </nav>
     </div>

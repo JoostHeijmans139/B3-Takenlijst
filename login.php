@@ -47,7 +47,7 @@ session_start();
 </body>
 </html>
 
-<?php if(isset($_GET['login']))
+<?php if($_GET['login'] == "fail")
     { ?>
         <script>
             setTimeout(function () {

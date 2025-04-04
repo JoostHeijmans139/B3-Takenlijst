@@ -1,28 +1,40 @@
 <?php
 session_start();
 
+require_once "../../../backend/conn.php";
+
 $title = $_POST['title'];
 $status = $_POST['status'];
 $department = $_POST['department'];
 $deadline = $_POST['deadline'];
-
-require_once "../../../backend/conn.php";
-
-// fetch user id
-
 $created_by = $_SESSION['user_id'];
+$action = $_POST['action'];
 
-// insert tasks into database
-$query2 = "INSERT INTO taken (title, department, deadline, created_by)
-VALUES(:title, :department, :deadline, :created_by)";
+if($action == "create")
+{
+    $queryCreate = "INSERT INTO taken (title, department, deadline, created_by)
+    VALUES(:title, :department, :deadline, :created_by)";
 
-$statement2 = $conn->prepare($query2);
+    $statementCreate = $conn->prepare($queryCreate);
 
-$statement2->execute([
-    ":title" => $title,
-    ":department" => $department,
-    ":deadline" => $deadline,
-    ":created_by" => $created_by,
-]);
+    $statementCreate->execute([
+        ":title" => $title,
+        ":department" => $department,
+        ":deadline" => $deadline,
+        ":created_by" => $created_by,
+    ]);
 
-header("Location: ../../../tasks/index.php");
+    header("Location: ../../../tasks/index.php?task=created");
+}
+
+if($action == "update")
+{
+    
+}
+
+if($action == "delete")
+{
+    
+}
+
+

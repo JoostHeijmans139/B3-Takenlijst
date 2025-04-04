@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="formButtons">
-                    <button type="submit" class="closeButton" onclick="closeForm()">Aanmaken</button>
+                    <button type="submit" class="closeButton" name="action" value="create" onclick="closeForm()">Aanmaken</button>
                     <button type="submit" class="closeButton" onclick="closeForm()">Annuleren</button>
                 </div>
             </div>

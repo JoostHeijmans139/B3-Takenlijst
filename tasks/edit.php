@@ -40,8 +40,8 @@
         </div>
         
         <div class="editFormButtons">
-            <button type="submit" class="closeEditButton" onclick="toggleEdit()">Bewerken</button>
-            <button type="submit" class="closeEditButton" onclick="toggleEdit()">Verwijderen</button>
+            <button type="submit" class="closeEditButton" name="action" value="update" onclick="toggleEdit()">Bewerken</button>
+            <button type="submit" class="closeEditButton" name="action" value="delete" onclick="toggleEdit()">Verwijderen</button>
         </div>
     </form>
     
