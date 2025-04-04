@@ -40,7 +40,19 @@ header("Pragma: no-cache");
             <?php 
             require_once 'create.php'
             ?>
-        
+
+            <?php
+            require_once '../backend/conn.php';
+
+            $query = "SELECT * FROM taken";
+
+            $statement = $conn->prepare($query);
+
+            $statement->execute();
+
+            $tasks = $statement->fetchAll(PDO::FETCH_ASSOC);
+            ?>
+
             <div class="taskColumns">
                 <div class="taskColumn">
                     <h2>To do</h2>
@@ -49,15 +61,20 @@ header("Pragma: no-cache");
                             <?php
                             require 'edit.php';
                             ?>
-                        <div class="tasks">
-                            <div class="taskAlign">
-                                <p class="taskName">Taaknaam</p>
-                                <a onclick="toggleEdit()" class="editTask"><i class="fa-solid fa-pen-to-square"></i></a>
+
+                        <?php foreach ($tasks as $task): ?>
+                            <div class="tasks">
+                                
+                                <div class="taskAlign">
+
+                                    <p class="taskName"><?php echo $task['title']; ?></p>
+                                    <a onclick="toggleEdit()" class="editTask"><i class="fa-solid fa-pen-to-square"></i></a>
+                                </div>
+                            
+                                <p class="departmentName"><?php echo $task['department']; ?></p>
+                                <p class="deadlineName">Deadline: <?php echo $task['deadline']; ?></p>
                             </div>
-                        
-                            <p class="departmentName">Afdeling</p>
-                            <p class="deadlineName">Deadline: 28-4-2025</p>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
 
