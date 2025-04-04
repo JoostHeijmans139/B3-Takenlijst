@@ -1,19 +1,3 @@
-<?php
-require_once "../backend/conn.php";
-$id = $_SESSION['id'];
-
-$query = "SELECT * FROM taken WHERE created_by = :id";
-
-$statement = $conn->prepare($query);
-
-$statement->execute([
-    ":id" => $id,
-]);
-
-$edit = $statement->fetch(PDO::FETCH_ASSOC);
-var_dump($edit)
-?>
-
 <div class="tasks hide">
 
     <div class="taskAlign">
@@ -22,30 +6,29 @@ var_dump($edit)
     </div>
 
     <form action="../app/Http/Controllers/tasksController.php" method="POST">
-        <input type="hidden" name="id" value="<?php $edit["id"]?>"/>
         <div class="formGroup">
             <label for="title">Taak</label>
-            <input type="text" name="title" class="edit">
+            <input type="text" name="title" class="edit" value="<?php echo $task['title']; ?>">
         </div>
 
         <div class="formGroup">
             <label for="department">Afdeling</label>
-            <input type="text" name="department" class="edit">
+            <input type="text" name="department" class="edit" value="<?php echo $task['department'];?>">
         </div>
 
         <div class="formGroup">
             <label for="status">Status</label>
             <div class="statusChoice">
                 <div>
-                    <input type="radio" name="status" value="To do">
+                    <input type="radio" name="status" value="to do" <?php if($task['status'] == "to do") echo "checked";?>>
                     <label for="todo">To do</label>
                 </div>
                 <div>
-                    <input type="radio" name="status" value="Doing">
+                    <input type="radio" name="status" value="doing" <?php if($task['status'] == "doing") echo "checked";?>>
                     <label for="doing">Doing</label>
                 </div>
                 <div>
-                    <input type="radio" name="status" value="Done">
+                    <input type="radio" name="status" value="done" <?php if($task['status'] == "done") echo "checked";?>>
                     <label for="done">Done</label>
                 </div>
             </div>
@@ -53,13 +36,13 @@ var_dump($edit)
 
         <div class="formGroup">
             <label for="deadline">Deadline</label>   
-            <input type="date" name="deadline" class="edit" id="deadline">
+            <input type="date" name="deadline" class="edit" id="deadline" value="<?php echo $task['deadline'];?>">
         </div>
+        <input type="hidden" name="id" value="<?php echo $task['id'];?>">
         
         <div class="editFormButtons">
             <button type="submit" class="closeEditButton" name="action" value="update" onclick="toggleEdit()">Bewerken</button>
             <button type="submit" class="closeEditButton" name="action" value="delete" onclick="toggleEdit()">Verwijderen</button>
         </div>
-    </form>
-    
+    </form>  
 </div>

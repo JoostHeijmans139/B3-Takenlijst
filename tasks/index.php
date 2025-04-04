@@ -36,73 +36,72 @@ header("Pragma: no-cache");
             ?>
 
             <?php
-            require_once '../backend/conn.php';
+                require_once '../backend/conn.php';
 
-            $query = "SELECT * FROM taken
-            ORDER BY deadline = CURDATE() DESC, deadline > CURDATE() DESC, deadline ASC";
+                $query = "SELECT * FROM taken WHERE created_by = :created_by
+                ORDER BY deadline = CURDATE() DESC, deadline > CURDATE() DESC, deadline ASC";
 
-            $statement = $conn->prepare($query);
+                $statement = $conn->prepare($query);
 
-            $statement->execute();
+                $statement->execute([
+                    ':created_by' => $_SESSION['user_id'],
+                ]);
 
-            $tasks = $statement->fetchAll(PDO::FETCH_ASSOC);
+                $tasks = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            $currentDate = new DateTime();
+                $currentDate = new DateTime();
             ?>
 
             <div class="taskColumns">
-                <div class="taskColumn">
-                    <h2>To do</h2>
-                
-                    <div class="taskHolder">         
-                            <?php
+            <div class="taskColumn">
+                <h2>To do</h2>
+                                
+                <?php    
+                    foreach ($tasks as $task): 
+                    if($task['status'] === "to do"):
+                ?>
+                    <div class="taskHolder">
+                        <?php     
                             require 'edit.php';
-                            ?>
-
-                            <?php
-                            foreach ($tasks as $task): 
-                            if($task['status'] === "to do") {
-                              require 'task.php';
-                            }; 
-                            ?>
-                            <?php endforeach; ?>
+                            require 'task.php';
+                        ?>
                     </div>
-                </div>
+                <?php endif ?>
+                <?php endforeach; ?>
+            </div>
 
                 <div class="taskColumn">
                     <h2>Doing</h2>
                                 
-                    <div class="taskHolder">         
-                            <?php
+                    <?php    
+                        foreach ($tasks as $task): 
+                        if($task['status'] === "doing"):
+                    ?>
+                    <div class="taskHolder">
+                        <?php     
                             require 'edit.php';
-                            ?>
-
-                            <?php
-                            foreach ($tasks as $task): 
-                            if($task['status'] === "doing") {
-                              require 'task.php';  
-                            }; 
-                            ?>
-                            <?php endforeach; ?>
+                            require 'task.php';
+                        ?>
                     </div>
+                    <?php endif ?>
+                    <?php endforeach; ?>
                 </div>
 
                 <div class="taskColumn">
                     <h2>Done</h2>
                                 
-                    <div class="taskHolder">         
-                            <?php
-                            require 'edit.php';
+                    <?php    
+                        foreach ($tasks as $task): 
+                        if($task['status'] === "done"):
+                    ?>
+                            <div class="taskHolder">
+                            <?php     
+                                require 'edit.php';
+                                require 'task.php';
                             ?>
-
-                            <?php
-                            foreach ($tasks as $task): 
-                            if($task['status'] === "done") {
-                              require 'task.php';  
-                            }; 
-                            ?>
-                            <?php endforeach; ?>
-                    </div>
+                        </div>
+                    <?php endif ?>
+                    <?php endforeach; ?>
                 </div>
 
             </div>

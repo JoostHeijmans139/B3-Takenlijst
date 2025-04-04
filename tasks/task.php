@@ -8,19 +8,17 @@
     <p class="departmentName"><?php echo $task['department']; ?></p>
     
     <?php
-    $currentDeadline = new DateTime($task['deadline']);
-    
-    $interval = $currentDate->diff($currentDeadline)->days;
-    
-    $closetoDeadline = $interval <= 2 && $currentDate <= $currentDeadline;
+        $currentDeadline = new DateTime($task['deadline']);
+        
+        $interval = $currentDate->diff($currentDeadline)->days;
+        
+        $closetoDeadline = $interval <= 2 && $currentDate <= $currentDeadline;
 
-    $markDeadline = $closetoDeadline ? 'markRed' : '';
+        $markDeadline = $closetoDeadline ? 'markRed' : '';
     ?>
     
     <div class="deadlineAlign">
-        <p class="deadlineName">Deadline: 
-            <?php echo "<p class='task $markDeadline'>"; 
-            echo ($task['deadline']); ?></p>
+        <p class="deadlineName">Deadline: <?php echo "<p class='task $markDeadline'>"; echo ($task['deadline']); ?></p>
         <?php echo "</p>"; ?>
     </div>
     
