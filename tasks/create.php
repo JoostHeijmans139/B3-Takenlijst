@@ -15,7 +15,7 @@
 
                 <div class="formGroup">
                     <label for="deadline">Deadline</label>   
-                    <input type="date" name="deadline" class="create" id="deadline">
+                    <input type="date" name="deadline" class="create" id="deadline" required>
                 </div>
 
                 <div class="formButtons">
