@@ -46,6 +46,8 @@ header("Pragma: no-cache");
             $statement->execute();
 
             $tasks = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            $currentDate = new DateTime();
             ?>
 
             <div class="taskColumns">
@@ -60,7 +62,7 @@ header("Pragma: no-cache");
                             <?php
                             foreach ($tasks as $task): 
                             if($task['status'] === "to do") {
-                              require 'task.php';  
+                              require 'task.php';
                             }; 
                             ?>
                             <?php endforeach; ?>

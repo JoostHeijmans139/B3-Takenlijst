@@ -230,7 +230,7 @@ label {
     background-color:#dcddde;
     border-radius: 5px;
     width: 300px;
-    min-height: 300px;
+    min-height: 260px;
 }
 
 h2 {
@@ -261,9 +261,19 @@ h2 {
     font-weight: 300;
 }
 
-.deadlineName {
+.deadlineName, .task {
     margin-top: 10px;
+    margin-right: 5px;
     font-weight: 400;
+}
+
+.markRed {
+    color: #f70808;
+}
+
+.deadlineAlign {
+    display: flex;
+    margin-right: 5px;
 }
 
 .taskAlign {
