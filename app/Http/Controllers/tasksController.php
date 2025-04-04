@@ -2,6 +2,7 @@
 session_start();
 
 $title = $_POST['title'];
+$status = $_POST['status'];
 $department = $_POST['department'];
 $deadline = $_POST['deadline'];
 

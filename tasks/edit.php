@@ -5,7 +5,7 @@
         <a onclick="toggleEdit()" class="editTask"><i class="fa-solid fa-x"></i></a>
     </div>
 
-    <form>
+    <form action="../app/Http/Controllers/tasksController.php" method="POST">
         <div class="formGroup">
             <label for="title">Taak</label>
             <input type="text" name="title" class="edit">
@@ -38,7 +38,6 @@
             <label for="deadline">Deadline</label>   
             <input type="date" name="deadline" class="edit" id="deadline">
         </div>
-
         
         <div class="editFormButtons">
             <button type="submit" class="closeEditButton" onclick="toggleEdit()">Bewerken</button>

@@ -62,19 +62,13 @@ header("Pragma: no-cache");
                             require 'edit.php';
                             ?>
 
-                        <?php foreach ($tasks as $task): ?>
-                            <div class="tasks">
-                                
-                                <div class="taskAlign">
-
-                                    <p class="taskName"><?php echo $task['title']; ?></p>
-                                    <a onclick="toggleEdit()" class="editTask"><i class="fa-solid fa-pen-to-square"></i></a>
-                                </div>
-                            
-                                <p class="departmentName"><?php echo $task['department']; ?></p>
-                                <p class="deadlineName">Deadline: <?php echo $task['deadline']; ?></p>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php
+                            foreach ($tasks as $task): 
+                            if($task['status'] === "to do") {
+                              require 'task.php';  
+                            }; 
+                            ?>
+                            <?php endforeach; ?>
                     </div>
                 </div>
 
@@ -85,15 +79,15 @@ header("Pragma: no-cache");
                             <?php
                             require 'edit.php';
                             ?>
-                        <div class="tasks">
-                            <div class="taskAlign">
-                                <p class="taskName">Taaknaam</p>
-                                <a onclick="toggleEdit()" class="editTask"><i class="fa-solid fa-pen-to-square"></i></a>
-                            </div>
-                        
-                            <p class="departmentName">Afdeling</p>
-                            <p class="deadlineName">Deadline: 28-4-2025</p>
-                        </div>
+
+                            <?php
+                            foreach ($tasks as $task): 
+                            if($task['status'] === "doing") {
+                              require 'task.php';  
+                            }; 
+                            ?>
+                            <?php endforeach; ?>
+
                     </div>
                 </div>
 
@@ -104,15 +98,14 @@ header("Pragma: no-cache");
                             <?php
                             require 'edit.php';
                             ?>
-                        <div class="tasks">
-                            <div class="taskAlign">
-                                <p class="taskName">Taaknaam</p>
-                                <a onclick="toggleEdit()" class="editTask"><i class="fa-solid fa-pen-to-square"></i></a>
-                            </div>
-                        
-                            <p class="departmentName">Afdeling</p>
-                            <p class="deadlineName">Deadline: 28-4-2025</p>
-                        </div>
+
+                            <?php
+                            foreach ($tasks as $task): 
+                            if($task['status'] === "done") {
+                              require 'task.php';  
+                            }; 
+                            ?>
+                            <?php endforeach; ?>
                     </div>
                 </div>
 
