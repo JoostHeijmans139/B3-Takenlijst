@@ -19,4 +19,4 @@ $statement->execute([
     ":password" => $hashedPassword,
 ]);
 
-header("Location: ../../../login.php");
+header("Location: ../../../login.php?login=null");
