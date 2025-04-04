@@ -56,14 +56,11 @@ header("Pragma: no-cache");
                 
                     <div class="taskHolder">         
                             <?php
-                            require 'edit.php';
-                            ?>
-
-                            <?php
                             foreach ($tasks as $task): 
                             if($task['status'] === "to do") {
                               require 'task.php';
-                            }; 
+                              $editTask = $task; require 'edit.php';
+                            };
                             ?>
                             <?php endforeach; ?>
                     </div>
@@ -73,15 +70,12 @@ header("Pragma: no-cache");
                     <h2>Doing</h2>
                                 
                     <div class="taskHolder">         
-                            <?php
-                            require 'edit.php';
-                            ?>
-
-                            <?php
+                    <?php
                             foreach ($tasks as $task): 
                             if($task['status'] === "doing") {
-                              require 'task.php';  
-                            }; 
+                              require 'task.php';
+                              $editTask = $task; require 'edit.php';
+                            };
                             ?>
                             <?php endforeach; ?>
                     </div>
@@ -92,14 +86,11 @@ header("Pragma: no-cache");
                                 
                     <div class="taskHolder">         
                             <?php
-                            require 'edit.php';
-                            ?>
-
-                            <?php
                             foreach ($tasks as $task): 
                             if($task['status'] === "done") {
-                              require 'task.php';  
-                            }; 
+                              require 'task.php';
+                              $editTask = $task; require 'edit.php';
+                            };
                             ?>
                             <?php endforeach; ?>
                     </div>

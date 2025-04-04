@@ -12,6 +12,7 @@ $action = $_POST['action'];
 $id =$_POST['id'];
 
 
+
 if($action == "cancel")
 {
     header("Location: ../../../tasks/index.php");
@@ -36,7 +37,7 @@ if($action == "create")
 
 if($action == "update")
 {
-    $queryUpdate = "UPDATE taken title = :title, status = :status, department = :department, deadline = :deadline";
+    $queryUpdate = "UPDATE taken SET title = :title, status = :status, department = :department, deadline = :deadline WHERE id = :id AND created_by = :created_by";
 
     $statementUpdate = $conn->prepare($queryUpdate);
 
@@ -45,6 +46,8 @@ if($action == "update")
         ":status" => $status,
         ":department" => $department,
         ":deadline" => $deadline,
+        ":id" => $id,
+        ":created_by" => $created_by,
     ]);
 
     header("Location: ../../../tasks/index.php?task=edited");
@@ -53,10 +56,13 @@ if($action == "update")
 if($action == "delete")
 {
     $queryDelete = "DELETE FROM taken WHERE id = :id";
+
     $statementDelete = $conn->prepare($queryDelete);
+
     $statementDelete->execute([
         ":id" => $id
     ]);
+
     header("Location: ../../../tasks/index.php?task=deleted");
 }
 
