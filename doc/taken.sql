@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Gegenereerd op: 04 apr 2025 om 07:55
+-- Gegenereerd op: 04 apr 2025 om 11:46
 -- Serverversie: 8.0.30
 -- PHP-versie: 8.1.10
 
@@ -24,27 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `login_data`
---
-
-CREATE TABLE `login_data` (
-  `id` int NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Gegevens worden geëxporteerd voor tabel `login_data`
---
-
-INSERT INTO `login_data` (`id`, `email`, `password`, `name`) VALUES
-(1, 'jwfheijmans@gmail.com', '$2y$10$QTjq6fpP44yqiiz0fH56wey/BuPlYKlNCJ4UWoFWGgjbLnCUuUdEy', 'Kat'),
-(9, 'p@p', '$2y$10$q5vDgRAXkZcZapEtjyM1ueY0/yk5MA2CDiGYJtmiDCL3Bm148Bole', 'p');
-
--- --------------------------------------------------------
-
---
 -- Tabelstructuur voor tabel `taken`
 --
 
@@ -54,7 +33,7 @@ CREATE TABLE `taken` (
   `status` varchar(255) DEFAULT 'to do',
   `department` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `deadline` date DEFAULT NULL,
-  `created_by` int DEFAULT NULL
+  `created_by` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -62,18 +41,13 @@ CREATE TABLE `taken` (
 --
 
 INSERT INTO `taken` (`id`, `title`, `status`, `department`, `deadline`, `created_by`) VALUES
-(1, 'hoi', 'to do', 'b', '2025-04-10', 1),
-(2, 'hoi', 'to do', 'b', '2025-04-10', 1);
+(16, 'wed', 'to do', 'wedwed', '2025-04-10', 1),
+(17, 'eraserf', 'to do', 'aerferfarsfffffffff', '2025-04-17', 9),
+(18, 'aweef', 'to do', 'srf', '2025-04-17', 1);
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
-
---
--- Indexen voor tabel `login_data`
---
-ALTER TABLE `login_data`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexen voor tabel `taken`
@@ -86,16 +60,10 @@ ALTER TABLE `taken`
 --
 
 --
--- AUTO_INCREMENT voor een tabel `login_data`
---
-ALTER TABLE `login_data`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
 -- AUTO_INCREMENT voor een tabel `taken`
 --
 ALTER TABLE `taken`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

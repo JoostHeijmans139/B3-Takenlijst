@@ -134,3 +134,21 @@ header("Pragma: no-cache");
             }, 25)
         </script>
     <?php } ?>
+
+    <?php if($_GET['task'] == "edited")
+    { ?>
+        <script>
+            setTimeout(function () {
+                alert("Taak bewerkt!")
+            }, 25)
+        </script>
+    <?php } ?>
+
+<?php if($_GET['task'] == "deleted")
+    { ?>
+        <script>
+            setTimeout(function () {
+                alert("Taak verwijderd!")
+            }, 25)
+        </script>
+    <?php } ?>

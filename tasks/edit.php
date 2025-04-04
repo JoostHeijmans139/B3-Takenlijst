@@ -1,3 +1,19 @@
+<?php
+require_once "../backend/conn.php";
+$id = $_SESSION['id'];
+
+$query = "SELECT * FROM taken WHERE created_by = :id";
+
+$statement = $conn->prepare($query);
+
+$statement->execute([
+    ":id" => $id,
+]);
+
+$edit = $statement->fetch(PDO::FETCH_ASSOC);
+var_dump($edit)
+?>
+
 <div class="tasks hide">
 
     <div class="taskAlign">
@@ -6,6 +22,7 @@
     </div>
 
     <form action="../app/Http/Controllers/tasksController.php" method="POST">
+        <input type="hidden" name="id" value="<?php $edit["id"]?>"/>
         <div class="formGroup">
             <label for="title">Taak</label>
             <input type="text" name="title" class="edit">
