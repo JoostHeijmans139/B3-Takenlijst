@@ -51,9 +51,7 @@ if($action == "update")
 if($action == "delete")
 {
     $queryDelete = "DELETE FROM taken WHERE id = :id";
-
     $statementDelete = $conn->prepare($queryDelete);
-
     $statementDelete->execute([
         ":id" => $id,
     ]);

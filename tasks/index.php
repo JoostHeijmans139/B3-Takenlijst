@@ -85,7 +85,7 @@ header("Pragma: no-cache");
                     </div>
                     <?php endif ?>
                     <?php endforeach; ?>
-                </kHo>
+                </div>
 
                 <div class="taskColumn">
                     <h2>Done</h2>
