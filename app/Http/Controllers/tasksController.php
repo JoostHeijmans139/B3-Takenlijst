@@ -2,35 +2,26 @@
 session_start();
 
 $title = $_POST['title'];
-$status = $_POST['status'];
 $department = $_POST['department'];
 $deadline = $_POST['deadline'];
-$created_by = $user['id'];
 
 require_once "../../../backend/conn.php";
 
 // fetch user id
-$query = "SELECT * FROM login_data WHERE email = :email";
 
-$statement = $conn->prepare($query);
-
-$statement->execute([
-    ":email" => $email,
-]);
-
-$user = $statement->fetch(PDO::FETCH_ASSOC);
+$created_by = $_SESSION['user_id'];
 
 // insert tasks into database
-$query2 = "INSERT INTO taken (title, status, department, deadline)
-VALUES(:title, :status, :department, :deadline)";
+$query2 = "INSERT INTO taken (title, department, deadline, created_by)
+VALUES(:title, :department, :deadline, :created_by)";
 
 $statement2 = $conn->prepare($query2);
 
 $statement2->execute([
     ":title" => $title,
-    ":status" => $status,
     ":department" => $department,
     ":deadline" => $deadline,
+    ":created_by" => $created_by,
 ]);
 
 header("Location: ../../../tasks/index.php");
