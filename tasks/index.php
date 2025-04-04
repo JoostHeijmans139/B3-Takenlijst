@@ -10,13 +10,7 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 
 header("Pragma: no-cache");
- 
 ?>
-
-<!-- 1. Kolom "created by" maken
-2. één grote query maken om alle taken op te halen
-3. for each loop maken voor elke task type -->
-
 
 <!DOCTYPE html>
 <html lang="nl">
@@ -44,7 +38,8 @@ header("Pragma: no-cache");
             <?php
             require_once '../backend/conn.php';
 
-            $query = "SELECT * FROM taken";
+            $query = "SELECT * FROM taken
+            ORDER BY deadline = CURDATE() DESC, deadline > CURDATE() DESC, deadline ASC";
 
             $statement = $conn->prepare($query);
 
@@ -87,7 +82,6 @@ header("Pragma: no-cache");
                             }; 
                             ?>
                             <?php endforeach; ?>
-
                     </div>
                 </div>
 
@@ -125,7 +119,6 @@ header("Pragma: no-cache");
             event.target.closest(".taskHolder").children[0].classList.toggle("hide");
             event.target.closest(".taskHolder").children[1].classList.toggle("hide");
         }
-        
     </script>
 
 </body>

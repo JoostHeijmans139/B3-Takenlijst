@@ -11,14 +11,14 @@ session_start();
     <link rel="stylesheet" href="public_html/css/main.css">
 
     <?php
-    require_once 'backend/config.php';
+    require_once 'backend/config.php'
     ?>
 </head>
 
 <body>
 
     <?php
-    require_once "header.php"
+    require_once 'header.php'
     ?>
     
     <div class="wrapper">

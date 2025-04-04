@@ -16,7 +16,6 @@ session_start();
     require_once 'header.php' 
     ?>
 
-
     <div class="wrapper">
         <main>
             <img src="public_html/img/logo-big-v2.png" alt="developer land" class="bannerLogo">

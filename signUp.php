@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" href="public_html/css/main.css">
 
     <?php
-    require_once 'backend/config.php';
+    require_once 'backend/config.php'
     ?>
 </head>
 
